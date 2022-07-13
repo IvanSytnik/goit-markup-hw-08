@@ -54,6 +54,9 @@ h1,h2,h3,h4,h5,h6{
   color: rgba(0, 0, 0, 0);
 }
 
+.icon {
+  fill: #AFB1B8;
+}
 /* Header section */
 
 header {
@@ -111,6 +114,7 @@ header {
 
 .link:hover,  .link:focus, .link:active {
   color: var(--active-text-color);
+  
 }
 
 .contacts {
@@ -126,7 +130,23 @@ header {
   color: var(--secondary-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  display: flex;
+  align-items: center;
 }
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: var(--secondary-text-color);
+}
+
+.menu-item:hover, .menu-item:focus, .menu-item:active {
+  color: var(--active-text-color);
+  fill: var(--active-text-color);
+
+}
+
+
+
 
 /*Order section*/
 
@@ -192,16 +212,14 @@ header {
   
 }
 
-.advantage-element::before{
-  content: "";
-  display: block;
+.advantage-icon-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-color: var(--team-background);
   margin-bottom: 30px;
-
+  border-radius: 4px;
 }
 
 .advantage-element:nth-child(4n) {
@@ -267,7 +285,9 @@ header {
 .team-element {
   width: 270px;
   margin-right: 30px;
-  
+  background-color: var(--body-background);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-element:nth-child(4n) {
@@ -300,10 +320,67 @@ header {
   
 }
 
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  justify-content:space-between;
+  margin-top: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.team-social-element{
+ margin-left: 10px;
+}
+
+.team-social-element:first-child {
+  margin-left: 0;
+}
+
+.team-social-link {
+  padding: 12px;
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.team-social-link:hover {
+  background-color: var(--active-text-color);
+}
+
+/*Clients section*/
+
+.clients{
+  display: flex;
+  justify-content: center;
+  justify-content:space-between;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.clients-element-link {
+  padding: 16px 32px;
+  display: block;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: #FFFFFF;
+}
+
 /*Footer*/
+
+.footer-container {
+  display: flex;
+}
+
 .footer-section {
   background-color: var(--secondary-background);
-  padding: 60px 0px;
+  
   
 }
 
@@ -311,6 +388,10 @@ header {
   color: var(--body-background);
   margin-bottom: 20px;
   display: inline-block;
+}
+
+.footer-section-contacts {
+  margin: 60px 0px;
 }
 
 .contacts-footer {
@@ -337,6 +418,48 @@ header {
   color: rgba(255, 255, 255, 0.6);
   display: inline-block;
   
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  margin: 72px 0px 100px 70px;
+}
+
+.footer-social {
+  display: flex;
+  
+}
+
+.footer-social-elment {
+  margin-left: 10px;
+}
+
+.footer-social-elment:first-child {
+  margin-left: 0px;
+}
+
+.footer-social-link {
+  padding: 12px;
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  
+}
+
+.footer-icon {
+  fill: #FFFFFF;
+}
+
+.social-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 /* Portfolio*/
@@ -374,6 +497,7 @@ header {
 .sidebar-btn:hover, .sidebar-btn:focus, .sidebar-btn:active  {
   background-color: var(--active-text-color);
   color: var(--body-background);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .example {
@@ -387,6 +511,10 @@ header {
   margin-left: 30px;
   width: 370px;
   
+}
+
+.example-element:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .example-element:nth-child(3n + 1) {
