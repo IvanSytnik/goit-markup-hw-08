@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .icon {
-  fill: #AFB1B8;
+  
 }
 /* Header section */
 
@@ -132,14 +132,15 @@ header {
   padding-bottom: 32px;
   display: flex;
   align-items: center;
+  fill: var(--secondary-text-color);
 }
 
 .contacts-icon {
   margin-right: 10px;
-  fill: var(--secondary-text-color);
+  
 }
 
-.menu-item:hover, .menu-item:focus, .menu-item:active {
+.contacts-link:hover, .contacts-link:focus, .contacts-link:active {
   color: var(--active-text-color);
   fill: var(--active-text-color);
 
@@ -344,11 +345,14 @@ header {
   cursor: pointer;
   border: none;
   border-radius: 50%;
+  fill: #AFB1B8;
 }
 
-.team-social-link:hover {
+.team-social-link:hover, .team-social-link:active {
   background-color: var(--active-text-color);
+  fill: #FFFFFF;
 }
+
 
 /*Clients section*/
 
@@ -366,11 +370,14 @@ header {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   cursor: pointer;
+  fill: #AFB1B8;
 }
 
-.icon:hover {
-  fill: #FFFFFF;
+.clients-element-link:hover, .clients-element-link:active {
+  border: 1px solid var(--active-text-color);
+  fill: var(--active-text-color);
 }
+
 
 /*Footer*/
 
@@ -446,12 +453,13 @@ header {
   border: none;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  
-}
-
-.footer-icon {
   fill: #FFFFFF;
 }
+  
+.footer-social-link:hover, .footer-social-link:active {
+  background-color: var(--active-text-color);
+}
+
 
 .social-title {
   margin: 0;
