@@ -155,7 +155,6 @@ header {
   padding: 200px 0px;
   text-align: center;
   max-width: 1600px;
-  height: 480px;
   margin-left: auto;
   margin-right: auto;
   background-image: 
@@ -340,15 +339,19 @@ header {
 }
 
 .team-social-link {
-  padding: 12px;
-  display: block;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   border: none;
   border-radius: 50%;
   fill: #AFB1B8;
 }
 
-.team-social-link:hover, .team-social-link:active {
+.team-social-link:hover, .team-social-link:active, .team-social-link:focus {
   background-color: var(--active-text-color);
   fill: #FFFFFF;
 }
@@ -365,15 +368,18 @@ header {
 }
 
 .clients-element-link {
-  padding: 16px 32px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   cursor: pointer;
   fill: #AFB1B8;
 }
 
-.clients-element-link:hover, .clients-element-link:active {
+.clients-element-link:hover, .clients-element-link:active, .clients-element-link:focus  {
   border: 1px solid var(--active-text-color);
   fill: var(--active-text-color);
 }
@@ -447,8 +453,11 @@ header {
 }
 
 .footer-social-link {
-  padding: 12px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   border: none;
   border-radius: 50%;
@@ -456,7 +465,7 @@ header {
   fill: #FFFFFF;
 }
   
-.footer-social-link:hover, .footer-social-link:active {
+.footer-social-link:hover, .footer-social-link:active, .footer-social-link:focus {
   background-color: var(--active-text-color);
 }
 
