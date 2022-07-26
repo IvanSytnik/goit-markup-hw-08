@@ -57,39 +57,51 @@
                             </use>
                         </svg>
                     </button>
-                    <h2> Оставьте свои данные, мы вам перезвоним</h2>
+                    <h2 class="modal-title"> Оставьте свои данные, мы вам перезвоним</h2>
 
-                    <form action=""> 
-                        <label for=""> 
-                            Имя
-                            <br>
-                            <input type="text" name="user-name" id="user-name">
-                        </label>
-                        <br>
-                        <label for="tel"> 
-                            Телефон
-                            <br>
-                            <input type="tel" name="tel" id="tel">
-                        </label>
-                        <br>
-                        <label for=""> 
-                            Почта
-                            <br>
-                            <input type="email" name="mail" id="mail" placeholder="E-mail">
-                        </label>
-                        <br>
-                        <label>
-                            Комментарий
-                            <br>
-                            <textarea name="coments" rows="5" placeholder="Введите текст"></textarea>
-                          </label>
-                            <br>
-                            <label>
-                                <input type="checkbox" name="agree" value="agree"/>
-                                <p>Соглашаюсь с рассылкой и принимаю <a href="#"> Условия договора</a></p>
-                            </label>   
-                            <button type="submit">Отправить</button> 
+                    <form name="request" autocomplete="on">
+                        <div class="form-field">
+                            <label class="form-request-label" for="user-name">Имя</label>
+                            <div class="form-field-icon">
+                                <input class="form-request-input" id="user-name" type="text" name="user-name" required >
+                                <svg class="form-icon" aria-label="link mail" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-person"></use>
+                                </svg>
+                            </div>    
+                        </div>
+                        <div class="form-field">
+                            <label class="form-request-label" for="user-phone">Телефон</label>
+                            <div class="form-field-icon">
+                                <input class="form-request-input" id="user-phone" type="tel" name="user-phone" required >
+                                <svg class="form-icon" aria-label="link mail" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-phone"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-request-label" for="user-email">Почта</label>
+                            <div class="form-field-icon">
+                                <input class="form-request-input" id="user-email" type="email" name="user-email" required >
+                                <svg class="form-icon" aria-label="link mail" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-email"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-request-label" for="user-comment">Комментарий</label>
+                            <textarea class="form-request-textarea" id="user-comment" name="user-comment" rows="5" placeholder="Введите текст"></textarea>
+                        </div>
+                        <div class="form-checkbox">
+                            <label class="form-request-label" for="terms-condition">
+                                <input class="form-request-input-checkbox" id="terms-condition" type="checkbox" name="terms-condition">
+                                <svg class="form-icon" aria-label="link mail" width="16" height="15">
+                                    <use href="./images/sprite.svg#icon-check"></use>
+                                </svg>
+                                Соглашаюсь с рассылкой и принимаю <span class="form-ruls">Условия договора</span></label>
+                         </div>
+                        <button class="form-button" type="submit">Отправить</button>  
                     </form>
+                
                 </div>
             </div>
         </section>
@@ -265,15 +277,24 @@
 
 
             </div>
+            <div class="subscription">
+                <h3 class="subscription-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
+                <form name="subscription" autocomplete="on">
+                    <label>
+                        <input type="email" name="email" placeholder="E-mail" class="email" required  />
+                    </label>
+                    <button class="button-subscription" type="submit">
+                        <div class="subscription-tumb">
+                            Подписаться
+                            <svg class="subscription-icon" aria-label="link subscription" width="24" height="24">
+                            <use href="./images/sprite.svg#icon-send"></use>
+                            </svg>
+                        </div>   
+                    </button>
+                </form>
+            </div>
         </div>
-        <form action="">
-        <label for="mail">Подпишитесь на рассылку</label>
-        <br>
-            <input type="email" name="mail" id="mail" placeholder="E-mail">
         
-            <button type="submit">Подписаться</button>
-
-        </form>
 
 
         
