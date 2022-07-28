@@ -276,7 +276,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
+
+.btn-close:hover, .btn-close:focus, .btn-close:active {
+  fill: var(--active-text-color);
+}  
+
 
 .modal-title {
   font-weight: 700;
@@ -416,6 +422,7 @@ header {
   color: var(--body-background);
   background-color: var(--active-text-color);
   font-family: inherit;
+  letter-spacing: 0.06em;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -787,9 +794,11 @@ header {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
   text-align: center;
   align-items: center;
   cursor: pointer;
+  border: none;
 
   transition-property: background-color;
   transition-delay: 250ms;
@@ -823,9 +832,6 @@ header {
   
 }
 
-.button-subscription {
-  border: none;
-}
 
 .subscription-text {
   margin: 0;
