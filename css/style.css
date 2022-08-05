@@ -67,7 +67,7 @@ header {
   justify-content: space-between;
 }
 
-.nav-container {
+.nav {
   display: flex;
   align-items: center;
   
@@ -294,11 +294,11 @@ header {
   margin-bottom: 12px;
 }
 
-.form-field {
+.form-request {
   margin-bottom: 10px;
 }
 
-.form-field-icon {
+.form-request-icon {
   position: relative;
 }
 .form-request-label {

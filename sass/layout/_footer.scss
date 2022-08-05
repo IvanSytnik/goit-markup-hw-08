@@ -1,0 +1,11 @@
+.footer {
+    background-color: $additionalBackgroundColor;
+
+    &-container {
+        display: flex;
+    }
+
+    &__adress-tumb{
+        margin: 60px 0;
+        }
+}

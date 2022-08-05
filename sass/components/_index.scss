@@ -1,0 +1,527 @@
+// hero
+
+.hero {
+    background-color: $additionalBackgroundColor;
+    text-align: center;
+    padding: 200px 0;
+    background-image:
+        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url(../images/hero.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        color: $primeryBodyColor;
+        font-weight: 900;
+        font-size: 44px;
+        max-width: 696px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-align: center;
+        text-transform: uppercase;  
+    }
+}
+
+// modal
+.backdrop {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+    transition: opacity 1250ms $transitionTimingFunction;
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.modal {
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    max-height: 581px;
+    height: 100%;
+    padding: 40px;
+
+    background: $primeryBodyColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $titleTextColor;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+}
+
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    fill: $titleTextColor;
+    background-color: $primeryBodyColor;
+    padding: 0;
+    cursor: pointer;
+
+    transition: fill 250ms $transitionTimingFunction;
+
+
+    &:hover,
+    &:focus {
+        fill: $accentColor;
+        outline: transparent;
+    }
+}
+
+.form-request {
+    margin-bottom: 10px;
+
+
+    &__tumb {
+        position: relative;
+    }
+    
+    &__label {
+        display: block;
+        text-align: left;
+        margin-bottom: 4px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.15;
+    }
+
+    &__input-checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    &__ruls {
+        color: $accentColor;
+        text-decoration-line:underline;
+    }
+}
+
+.form-request__input {
+    height: 40px;
+     width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 8px 12px 42px;
+
+    transition: border 250ms $transitionTimingFunction;
+    
+
+    &:hover,
+    &:focus {
+        border: 1px solid $accentColor;
+        outline: transparent;
+    }
+}
+
+.form-request__textarea {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    
+    padding: 12px;
+    width: 100%;
+    height: 120px;
+
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    cursor: pointer;
+
+    transition: border 250ms $transitionTimingFunction;
+   
+    &:hover,
+    &:focus  {
+        border: 1px solid $accentColor;
+        outline: transparent;
+    }
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+    }
+}
+
+.form-request__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: $transitionTimingFunction;
+
+
+    .form-request__tumb:hover &,
+    .form-request__:focus-within &  {
+        fill: $accentColor;
+    }
+
+    .form-request__input-checkbox:checked + & {
+        fill: $primeryBackgroundColor;
+        border: none;
+        }
+}
+
+.form-checkbox {
+    position: relative;
+
+    text-align: end;
+    width: 425px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;    
+
+    & .form-request__label {
+        display: inline;
+        justify-content: row;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+
+    & .form-request__icon {
+        left: 0;
+        border: 2px solid $titleTextColor;
+        border-radius: 2px;
+        fill: $primeryBodyColor;
+    }
+}
+
+// benefits
+.benefits {
+    
+    &__list {
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    &__item {
+        width: calc((100% - 3*#{$cardSetGap})/4);
+    }
+
+    &__item:not(:first-child) {
+        margin-left: $cardSetGap;
+    }
+
+    &__tumb {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 120px;
+        margin-bottom: $cardSetGap;
+        border: none;
+        border-radius: 4px;
+        background: $teamBackgroundColor;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        color: $titleTextColor;
+        }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+}
+
+// works-section
+.works-section {
+    padding-top: 0;
+    }
+    
+.works {
+    
+    &__list {
+        display: flex;
+    }
+    
+    &__item:not(:last-child) {
+        width: 370px;
+        margin-right: $cardSetGap;
+    }
+    
+    &__thumb {
+        position: relative;
+        z-index: 1;
+    }
+    
+    &__name {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        margin: 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $primeryBodyColor;
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}
+
+// team-section
+.team-section {
+    background-color: $teamBackgroundColor;
+}
+
+.team {
+    display: flex;
+
+    &__item {
+        background: $primeryBodyColor;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        padding-top: 0;
+    }
+
+    &__item:not(:last-child) {
+        flex-basis: 270px;
+        margin-right: $cardSetGap;   
+    }
+
+    &__name {
+        margin-top: $cardSetGap;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $titleTextColor;
+    }
+
+    &__positoin {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+    }
+
+    &__socials{
+        margin-top: 16px;
+        margin-left: 32px;
+        margin-right: 32px;
+        margin-bottom: 30px;
+    }
+}
+
+// clients
+.clients {
+    display: flex;
+    justify-content: space-between;
+    
+    &__item {
+        display: flex;
+        width: 170px;
+        height: 92px;
+    }
+}
+
+
+.clients__link {
+        padding: 16px 32px;
+        border: 1px solid $primaryTextColor; 
+        border-radius: 4px;
+    
+        transition-property: border;
+        transition-duration: 250ms;
+        transition-timing-function: $transitionTimingFunction;
+    
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border: 1px solid $accentColor;
+    }
+}
+
+.clients__icon {
+        fill: rgba(175, 177, 184, 1);
+
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: $transitionTimingFunction;
+    
+
+    .clients__link:hover &,
+    .clients__link:focus & {
+        fill: $accentColor;
+    }
+}
+
+.projects-filter {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+
+
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.projects-filter__button {
+    padding: 6px 22px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $titleTextColor;
+    cursor: pointer;
+
+    transition-property: backgroud-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $transitionTimingFunction;
+
+
+    &:hover,
+    &:focus {
+        background-color: $accentColor;
+        color: $primeryBodyColor;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+        0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &__item {
+        width: 370px;
+        margin-right: $cardSetGap;
+        margin-bottom: $cardSetGap;
+    }
+
+    &__item:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    &__item:nth-last-child(-n+3) {
+        margin-bottom: 0;
+    }
+    
+    &__card {
+        position: relative;
+    
+        overflow: hidden;
+    }
+}
+
+// portfolio
+.projects__link{
+    display: block;
+
+    transition-property: order-radius, border, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $transitionTimingFunction;
+
+    &:hover,
+    &:focus {
+        border-radius: 4px;
+        border: 1px solid #eeeeee;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+        0px 4px 4px rgba(0, 0, 0, 0.06), 
+        1px 4px 6px rgba(0, 0, 0, 0.16);   
+    }
+}
+
+.projects-content {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+   
+
+    &__company {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $titleTextColor;
+    }
+
+    &__name {
+        margin-top: 4px;
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.03em;
+    }
+}

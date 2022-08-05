@@ -1,0 +1,139 @@
+.sidebar {
+    display: flex;
+    margin-left: 280px;
+    margin-right: 280px;
+    
+  }
+  
+.sidebar__element {
+    margin-left: 8px;
+    
+    &:first-child {
+        margin-left: 0px;
+    }
+}
+
+.sidebar__btn {
+    background-color: $team-background;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: 0.03em;
+    color: $brand-text-color;
+    border: none;
+    white-space: nowrap;
+    padding: 6px 22px;
+  
+    transition: background-color 250ms $transition-timing-function, color 250ms $transition-timing-function,  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus, &:active  {
+        background-color: $active-text-color;
+        color: $body-background;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      }
+}
+
+.example__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  
+}
+
+.example__element {
+    margin-bottom: 32px;
+    margin-left: 30px;
+    width: 370px;
+    
+    transition: box-shadow 250ms $transition-timing-function;
+  
+    &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      }
+      
+      &:nth-child(3n + 1) {
+        margin-left: 0px;
+      }
+      
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0px;
+      }
+}
+
+.example__hover {
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+        display: inline-block;
+        content: '';
+      
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(33, 150, 243, 0.9);
+      
+        transform: translateY(+100%);
+        transition: transform 250ms $transition-timing-function ;
+    }
+
+
+    .example__element:hover &::before {
+  
+        transform: translateY(0);
+    }
+}
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+  
+    transform: translateY(101%);
+  
+    transition: transform 250ms $transition-timing-function;
+  
+    .example__element:hover & {
+        transform: translateY(0);
+    }
+
+    & > p {
+        color: $body-background;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        padding: 63px 24px;
+        margin: 0;
+      }
+}
+
+.example__title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    
+  }
+  
+  .example__text{
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+    margin-top: 4px;
+  
+  }
+  
+  .example__border {
+    border: 1px solid #f6f6f6;
+    border-top: 0px;
+    padding: 20px 24px;
+  }

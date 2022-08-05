@@ -1,0 +1,22 @@
+.site-nav {
+
+    &__list {
+        display: flex;
+        margin-left: 93px;    
+    }
+    
+    &__item{
+        padding-top: 32px;
+    }
+    
+    &__item:not(:last-child) {
+        margin-right: 50px;   
+    }
+    &__link {
+        color: $titleTextColor;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14px;
+        letter-spacing: 0.02em;
+    }
+}
