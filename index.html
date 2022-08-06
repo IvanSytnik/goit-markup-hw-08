@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
                         <li class="menu__item"> <a class="menu__link link" href="./portfolio.html">Портфолио</a></li>
                         <li class="menu__item"> <a class="menu__link link" href="#">Контакты</a></li>
                     </ul>
-        
+                    
                     </nav>
                
 
@@ -37,7 +37,11 @@
                             +38 096 111 11 11</a></li>
                     </ul>
                 
-            
+                    <button type="button" class="menu__btn js-open-menu">
+                        <svg class="icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon__menu" href="./images/sprite.svg#icon-menu"></use>
+                        
+                    </svg></button>    
         </div>
     </header>
 
@@ -300,6 +304,37 @@
 
         
     </footer>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu__btn js-close-menu">
+           
+            <svg  width="40" height="40" aria-label="Кнопка закрытия мобильного меню">
+                
+                <use   href="./images/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+  
+        <ul class=" mobile-menu">
+            <li class="mobile-menu__element"> <a class=" mobile-menu__link mobile-menu__link--active " href="./index.html">Студия</a></li>
+            <li class="mobile-menu__element"> <a class=" mobile-menu__link" href="./portfolio.html">Портфолио</a></li>
+            <li class="mobile-menu__element"> <a class=" mobile-menu__link" href="#">Контакты</a></li>
+        </ul>
+
+            <a class="mobile__tell link" href="tel:+380961111111"> +38 096 111 11 11</a> 
+
+            <a class="mobile__mail link" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+                
+            
+        <ul class="mobile-social">
+            <li class="mobile-social__element"> <a class="mobile-social__link" href="#">Instagram</a></li>
+            <li class="mobile-social__element"> <a class="mobile-social__link" href="#">Twitter</a></li>
+            <li class="mobile-social__element"> <a class="mobile-social__link" href="#">Facebook</a></li>
+            <li class="mobile-social__element"> <a class="mobile-social__link" href="#">LinkedIn</a></li>
+        </ul>
+
+      </div>
+
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
