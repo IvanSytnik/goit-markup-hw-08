@@ -750,7 +750,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantage__element {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
@@ -862,19 +862,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 50px;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .team__element {
-  width: 270px;
-  margin-right: 30px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.team__element:nth-child(4n) {
-  margin-right: 0px;
 }
 
 .team__container {
@@ -910,8 +906,20 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 122px;
+  padding-right: 122px;
+}
+@media screen and (min-width: 768px) {
+  .team-social {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-social {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .team-social__element {
@@ -945,20 +953,28 @@ h1, h2, h3, h4, h5, h6 {
   fill: #FFFFFF;
 }
 
-.team__img {
+.team__photo {
   height: 460px;
 }
 @media screen and (min-width: 768px) {
-  .team__img {
+  .team__photo {
     height: 374px;
     width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .team__img {
+  .team__photo {
     height: 260px;
     width: 270px;
   }
+}
+
+.team__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .clients__list {
