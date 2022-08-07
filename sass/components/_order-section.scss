@@ -1,28 +1,84 @@
 .order{
-    padding: 200px 0px;
+    padding: 118px 0;
     text-align: center;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     background-image: 
     linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-     url(../images/order.jpg);
+     url(../images/hero480@2x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi)  {
+        
+    background-image:
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    url(../images/hero480@2x.jpg);     
+    }
+
+    @media screen and (min-width: 480px) {
+         
+    background-image:
+        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url(../images/hero768.jpg);
+    
+    
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi)  {
+    
+        background-image:
+        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url(../images/hero768@2x.jpg); 
+    
+    }
+}
+    @media screen and (min-width: 768px) {
+   
+        background-image:
+        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url(../images/hero.jpg);
+    
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        
+        background-image:
+        linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url(../images/hero@2x.jpg); 
+    
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 200px 0px;
+    }
+}
 }
 
 .order__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     color: $body-background;
-    width: 696px;
+    width: 360px;
     letter-spacing: 0.06em;
     margin-bottom: 32px;
     text-transform: uppercase;
     
-    
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        width: 696px;
+        line-height: 1.36;
+        }  
   }
 
 .order__btn {
