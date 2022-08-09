@@ -45,7 +45,10 @@
     padding: 48px 40px;
     background-color: $body-background;
     z-index: 999;
-  
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
 
@@ -55,10 +58,7 @@
   }
   
   
-  .mobile-menu {
-    margin-bottom: 302px;
-  }
-
+  
   .mobile-menu__element {
     margin-bottom: 32px;
 
@@ -132,4 +132,7 @@
     color: $active-text-color;
   }
 
+  .mobile-footer {
+
+  }
   
