@@ -61,7 +61,7 @@ h1,h2,h3,h4,h5,h6{
   padding-left: 15px;
   padding-right: 15px;
   
-  @media screen and (min-width: 480px) { 
+  @media screen and (max-width: 767px) { 
     width: 480px;
     
   }
