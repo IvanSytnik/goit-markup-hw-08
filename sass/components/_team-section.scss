@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
-
+    justify-content: center;
 }
   
 .team__element {
@@ -92,11 +92,14 @@
 }
 
 .team__photo {
-    height: 460px;    
+    @media screen and (min-width: 478) {
+        height: 460px; 
+    }
 
     @media screen and (min-width: 768px) {
         height: 374px;
         width: 354px;
+           
     }
 
     @media screen and (min-width: 1200px) {
